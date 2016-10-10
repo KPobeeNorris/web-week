@@ -25,5 +25,6 @@ get '/super' do
 end
 
 get '/homer' do
+@names = ["Amigo", "Oscar", "Viking"].sample
 erb(:index)
 end
