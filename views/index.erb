@@ -1,6 +1,13 @@
 
-  <div style='border: 3px dashed blue'>
-    <img src='http://cdn.mos.cms.futurecdn.net/04c6ea3a88378b441f8a9336638859bd-970-80.jpg'>
-  </div>
+<div style='border: 3px dashed blue'>
+  <img src='https://s-media-cache-ak0.pinimg.com/236x/bf/e4/20/bfe420d5b8873fcaae7c9e662ffdae5e.jpg'>
+</div>
 
-<h1>My name is <%=@names%><h1>
+<%if @name %>
+<h1>My name is <%=@name%><h1>
+<% end %>
+
+<form action="/named-homer">
+  <input type="text" name="name">
+  <input type="submit" value="Push me">
+</form>

@@ -24,7 +24,13 @@ get '/super' do
   "duper!"
 end
 
-get '/homer' do
-@names = ["Amigo", "Oscar", "Viking"].sample
+get '/random-homer' do
+@name = ["Amigo", "Oscar", "Viking"].sample
+erb(:index)
+end
+
+get '/named-homer' do
+p params
+@name = params[:name]
 erb(:index)
 end
